@@ -1,0 +1,26 @@
+3154	NComRxC.c NComRxC.h 	Standardise header comments.
+3216	NComRxC.h 	Simplify include guard.
+3218	NComRxC.c 	White space.
+3220	main.c 	Improve doxygen comments.
+3221	main.c 	Fix typo in comment.
+3222	main.c 	Use horizontal distance in example.
+3224	main.c 	Include correct header.
+3226	NComRxC.c 	Include correct header.
+3227	Makefile 	Extend Makefile to build the web version of the C decoder.
+3231	main.c 	Minor change.
+3232	main.c 	Simplify the name of the Dev ID hash define for the examples.
+3576	NComRxC.c 	Minor rewrite to DecodeExtra49() to stop MSVC warning about forcing value to bool 'true' or 'false'.
+3857	NComRxC.xml NComRxC.c NComRxC.h 	For C decoder rename Qnx to Os.
+4072	NComRxC.xml NComRxC.c NComRxC.h main.c 	Rename UTCOffset to TimeUtcOffset and reposition
+4073	NComRxC.xml NComRxC.c NComRxC.h 	Rename {GpsWeek, GpsSecond} to {TimeWeekCount, TimeWeekSecond}.
+4183	NComRxC.c NComRxC.h 	NumChars, NumPackets and SkippedChars are now uint64_t types.
+5548	NComRxC.c 	Fix bug in the decoding of antenna status and power.
+5565	NComRxC.h 	Extend IMU type enumeration with RD1 and IMU5.
+5736	NComRxC.c NComRxC.h 	Added angular accelerations computation and filtering to the NCOM C decoder and updated NCOMRXC_DEV_ID to "110810".
+6155	NComRxC.xml 	Renamed angular accelerations in line with C++ decoder. Added filtered acceleration and angular acceleration measurements. Tried to synchronise with C++ XML document whenever possible.
+6156	NComRxC.c NComRxC.h 	Renamed angular accelerations and angular acceleration filters. Added filtered linear accelerations. Restructured differentiation of angular rates and filtering code (for linear and angular accelerations). Decoding of linear acceleration filter characteristics from status channel 74. Comments.
+6299	NComRxC.c 	Bring NCOM C decoder in line with C++ decoder, by updating enumerated type string arrays, printing the filter characteristics in function NComReportFP() and bracketing constants when setting the core temperature in function DecodeExtraGpsStatus().
+6306	NComRxC.c 	Brought the processing sequence at the start of the NCOM C decoder function UpdateNav() in line with the NCOM C++ decoding; added function UpdateNavInvalidate(). Added checks for the invalid 24-bit integer values in the NCOM C decoding of acceleration, angular rate, velocity and angles (again in line with NCOM C++ decoder). Modified function UpdateNav() so that it now calls function FilteredOutputsCompute().
+6308	NComRxC.c 	Replaced MAX_INT_24 and MIN_INT_24 with POS_INT_24 and NEG_INT_24, to be more consistent with NCOM C++ decoder (and avoid redefining constants).
+6401	NComRxC.c NComRxC.h 	Updated NCOMRXC_DEV_ID to "111026". White space. Comments.
+6402	main.c 	Updated MAIN_DEV_ID to "111027".

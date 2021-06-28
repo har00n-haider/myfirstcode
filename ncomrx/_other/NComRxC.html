@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><title>NCom Decoder</title></head><style type="text/css">
+			.name     { font-family: consolas, courier, Monospace; font-size: 10pt; font-weight: bold; }
+			.name_raw { text-decoration: underline; }
+			.name_der { }
+			.name_mix { }
+			.name_unk { color: red; }
+			.tag      { font-family: consolas, courier, Monospace; font-size:  9pt; color: purple; }
+			.id       { font-family: consolas, courier, Monospace; font-size:  8pt; color: purple; }
+			.type     { font-family: consolas, courier, Monospace; font-size: 10pt; color: blue; }</style><body><h1 xmlns="" style="color: red">A. NComRxCGps</h1>
+<h2 xmlns="" style="color: blue">1. GPS Information</h2>
+<h3 xmlns="" style="color: green">1.1. System information</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).System :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Type</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>ComGpsTypeName</td><td><tt>E S </tt></td><td><i>Type of card fitted/connected.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">Format</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>ComGpsFormatName</td><td><tt>E S </tt></td><td><i>Data format of card fitted/connected.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).System_Rate :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">RawRate</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td>ComGpsXRateName</td><td><tt>E S L </tt></td><td><i>Raw update rate.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">PosRate</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td>ComGpsXRateName</td><td><tt>E S L </tt></td><td><i>Position update rate.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">VelRate</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td>ComGpsXRateName</td><td><tt>E S L </tt></td><td><i>Velocity update rate.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).System_Info :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AntStatus</span></td><td><tt class="tag">GPS_ANT_STATUS</tt></td><td><tt class="type">int</tt></td><td>ComGpsAntStatusName</td><td><tt>E S </tt></td><td><i>Antenna status.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">AntPower</span></td><td><tt class="tag">GPS_ANT_POWER</tt></td><td><tt class="type">int</tt></td><td>ComGpsAntPowerName</td><td><tt>E S </tt></td><td><i>Antenna power.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">PosMode</span></td><td><tt class="tag">GPS_POS_MODE</tt></td><td><tt class="type">int</tt></td><td>ComGpsXModeName</td><td><tt>E S </tt></td><td><i>Position mode.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).System_Serial :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">SerBaud</span></td><td><tt class="tag">GPS_SER_BAUD</tt></td><td><tt class="type">int</tt></td><td>ComOptionSerBaud</td><td><tt>E S </tt></td><td><i>Receiver baud.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.2. Status</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).Status :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">NumSats</span></td><td><tt class="tag">GPS_NUM_SAT</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Number of satellites tracked.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).Status_Hardware :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">CpuUsed</span></td><td><tt class="tag">GPS_CPU_USAGE</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>CPU usage.</i></td><td>%</td></tr>
+<tr><td class="name"><span class="name_raw">CoreNoise</span></td><td><tt class="tag">GPS_CORE_NOISE</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Core noise.</i></td><td>%</td></tr>
+<tr><td class="name"><span class="name_raw">CoreTemp</span></td><td><tt class="tag">GPS_CORE_TEMP</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Core temperature.</i></td><td>°C</td></tr>
+<tr><td class="name"><span class="name_raw">SupplyVolt</span></td><td><tt class="tag">GPS_SUPPLY_VOLT</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Supply voltage.</i></td><td>V</td></tr>
+</table>
+<h3 xmlns="" style="color: green">1.3. Received data statistics</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">(P, S, E).Stats_Received :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Chars</span></td><td><tt class="tag">GPS_CHARS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">CharsSkipped</span></td><td><tt class="tag">GPS_CHARS_SKIPPED</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of invalid bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">Pkts</span></td><td><tt class="tag">GPS_PKTS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of valid packets.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OldPkts</span></td><td><tt class="tag">GPS_OLD_PKTS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of out of date packets.</i></td><td/></tr>
+</table>
+<h1 xmlns="" style="color: red">B. NComRxC</h1>
+<h2 xmlns="" style="color: blue">1. General information</h2>
+<h3 xmlns="" style="color: green">1.1. Status</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">* .Status :
+						</td></tr>
+<tr><td class="name"><span class="name_der">OutputPacketType</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>OutputPacketName</td><td><tt>E S </tt></td><td><i>Type of output packet from the decoder.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">InsNavMode</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>NavigationStatusName</td><td><tt>E S </tt></td><td><i>Navigation system mode.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.2. System information</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">* .System_Id :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">SerialNumber</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Unit serial number.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">DevId</span></td><td><tt class="tag"/></td><td><tt class="type">char []</tt></td><td/><td><tt/></td><td><i>Development ID.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.System_Os :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OsVersion1</span></td><td><tt class="tag">RT_OS_VERSION_1</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Operating system major version.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OsVersion2</span></td><td><tt class="tag">RT_OS_VERSION_2</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Operating system minor version.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OsVersion3</span></td><td><tt class="tag">RT_OS_VERSION_3</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Operating system revision version.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OsScriptId</span></td><td><tt class="tag">RT_SCRIPT_VERSION</tt></td><td><tt class="type">char []</tt></td><td/><td><tt/></td><td><i>Operating system boot up script ID.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.System_Type :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">ImuType</span></td><td><tt class="tag">RT_IMU_TYPE</tt></td><td><tt class="type">int</tt></td><td>ImuTypeName</td><td><tt>E S </tt></td><td><i>Type of IMU fitted.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">CpuPcbType</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>CpuPcbTypeName</td><td><tt>E S </tt></td><td><i>Type of CPU PCB fitted.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">InterPcbType</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>InterPcbTypeName</td><td><tt>E S </tt></td><td><i>Type of interconnection PCB fitted.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">FrontPcbType</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>FrontPcbTypeName</td><td><tt>E S </tt></td><td><i>Type of front panel PCB fitted.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">InterSwId</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>InterSwIdName</td><td><tt>E S </tt></td><td><i>Software ID of interconnection PCB.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HwConfig</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>DeployCfgName</td><td><tt>E S </tt></td><td><i>Reserved for testing.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">* .System_TxRx :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">DiskSpace</span></td><td><tt class="tag"/></td><td><tt class="type">uint64_t</tt></td><td/><td><tt/></td><td><i>Remaining disk space.</i></td><td>B</td></tr>
+<tr><td class="name"><span class="name_raw">FileSize</span></td><td><tt class="tag"/></td><td><tt class="type">uint64_t</tt></td><td/><td><tt/></td><td><i>Size of current raw data file.</i></td><td>B</td></tr>
+<tr><td class="name"><span class="name_raw">UpTime</span></td><td><tt class="tag"/></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>Up time.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">DualPortRamStatus</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>DualPortRamStatusName</td><td><tt>E S </tt></td><td><i>Dual port RAM interface status.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.3. IMU information</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.ImuInfo_Misc :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">UmacStatus</span></td><td><tt class="tag"/></td><td><tt class="type">int</tt></td><td>ComUmacStatus</td><td><tt>E S </tt></td><td><i>UMAC (ABD) status.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.4. Global Navigation Satellite System (GNSS) information</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_System :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">GnssGpsEnabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Global Positioning System (GPS) enabled.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GnssGlonassEnabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>GLObal NAvigation Satellite System (GLONASS) enabled.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GnssGalileoEnabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Galileo enabled.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_Feature :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">PsrDiffEnabled</span></td><td><tt class="tag">RT_PSR_DIFF_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Pseudo-range differential.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">SBASEnabled</span></td><td><tt class="tag">RT_WAAS_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Satellite Based Augmentation System (SBAS).</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniVBSEnabled</span></td><td><tt class="tag">RT_OMNI_VB_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>OmniSTAR Virtual Base Station (VBS).</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniHPEnabled</span></td><td><tt class="tag">RT_OMNI_HP_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>OmniSTAR High Performance (HP).</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">L1DiffEnabled</span></td><td><tt class="tag">RT_L1_DIFF_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>L1 carrier-phase differential (RT20).</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">L1L2DiffEnabled</span></td><td><tt class="tag">RT_L1_L2_DIFF_ENABLED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>L1/L2 carrier-phase differential (RT2).</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_Raw :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">RawRngEnabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Raw pseudo-range output.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">RawDopEnabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Raw Doppler output.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">RawL1Enabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Raw L1 output.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">RawL2Enabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Raw L2 output.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">RawL5Enabled</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Raw L5 output.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_Mode :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">GpsPosMode</span></td><td><tt class="tag">RT_GPS_POS_MODE</tt></td><td><tt class="type">int</tt></td><td>ComGpsXModeName</td><td><tt>E S </tt></td><td><i>Position mode.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GpsVelMode</span></td><td><tt class="tag">RT_GPS_VEL_MODE</tt></td><td><tt class="type">int</tt></td><td>ComGpsXModeName</td><td><tt>E S </tt></td><td><i>Velocity mode.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GpsAttMode</span></td><td><tt class="tag">RT_GPS_ATT_MODE</tt></td><td><tt class="type">int</tt></td><td>ComGpsXModeName</td><td><tt>E S </tt></td><td><i>Attitude mode.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_Dop :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">PDOP</span></td><td><tt class="tag">RT_GPS_PDOP</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Positional dilution of precision.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">HDOP</span></td><td><tt class="tag">RT_GPS_HDOP</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Horizontal dilution of precision.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_der">VDOP</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Vertical dilution of precision.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GnssInfo_Misc :
+						 .System_Id</td></tr>
+<tr><td class="name"><span class="name_raw">GpsNumObs</span></td><td><tt class="tag">RT_GPS_NUM_OBS</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Number of satellites.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">Undulation</span></td><td><tt class="tag">RT_UNDULATION</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Difference between ellipsoidal altitude and geoidal altitude.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">GpsDiffAge</span></td><td><tt class="tag">RT_GPS_DIFF_AGE</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Differential corrections age to GPS.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">BaseStationId</span></td><td><tt class="tag">RT_BASE_STATION_ID</tt></td><td><tt class="type">char []</tt></td><td/><td><tt/></td><td><i>Differential base station ID.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.5. Dual antenna computation status</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.HeadSearch :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">HeadQuality</span></td><td><tt class="tag">RT_HEAD_QUALITY</tt></td><td><tt class="type">int</tt></td><td>ComHeadQuality</td><td><tt>E S </tt></td><td><i>Dual antenna Heading quality.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchType</span></td><td><tt class="tag">RT_HEAD_SEARCH_TYPE</tt></td><td><tt class="type">int</tt></td><td>ComHeadSearchType</td><td><tt>E S </tt></td><td><i>Dual antenna Heading search type.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchStatus</span></td><td><tt class="tag">RT_HEAD_SEARCH_STATUS</tt></td><td><tt class="type">int</tt></td><td>ComHeadSearchStatus</td><td><tt>E S </tt></td><td><i>Dual antenna Heading search status.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchReady</span></td><td><tt class="tag">RT_HEAD_SEARCH_READY</tt></td><td><tt class="type">int</tt></td><td>ComHeadSearchReady</td><td><tt>E S </tt></td><td><i>Dual antenna Heading search ready.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.HeadSearch_Stats :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchInit</span></td><td><tt class="tag">RT_HEAD_SEARCH_INIT</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Initial number of ambiguities in the heading search.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchNum</span></td><td><tt class="tag">RT_HEAD_SEARCH_NUM</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Remaining number of ambiguities in the heading search.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchTime</span></td><td><tt class="tag">RT_HEAD_SEARCH_TIME</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Heading Search Duration.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchConstr</span></td><td><tt class="tag">RT_HEAD_SEARCH_CONST</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Number of constraints applied in the Heading Search.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">* .HeadSearch_Lock :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchMaster</span></td><td><tt class="tag">RT_HEAD_SEARCH_MASTER</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Master Satellite PRN in the Heading Search.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchSlave1</span></td><td><tt class="tag">RT_HEAD_SEARCH_SLAVE_1</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Slave 1 Satellite PRN in the Heading Search.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchSlave2</span></td><td><tt class="tag">RT_HEAD_SEARCH_SLAVE_2</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Slave 2 Satellite PRN in the Heading Search.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">HeadSearchSlave3</span></td><td><tt class="tag">RT_HEAD_SEARCH_SLAVE_3</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Slave 3 Satellite PRN in the Heading Search.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">1.6. OmniSTAR information</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.OmniStar :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OmniStarSerial</span></td><td><tt class="tag"/></td><td><tt class="type">char []</tt></td><td/><td><tt/></td><td><i>OmniSTAR serial string.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStarFreq</span></td><td><tt class="tag">RT_OMNISTAR_FREQUENCY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>OmniSTAR frequency.</i></td><td>Hz</td></tr>
+<tr><td class="name"><span class="name_raw">OmniStarSNR</span></td><td><tt class="tag">RT_OMNISTAR_SNR</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>OmniSTAR signal to noise ratio.</i></td><td>dB</td></tr>
+<tr><td class="name"><span class="name_raw">OmniStarLockTime</span></td><td><tt class="tag">RT_OMNISTAR_LOCK_TIME</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>OmniSTAR lock time.</i></td><td>s</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.OmniStar_VirtualBaseStation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusVbsExpired</span></td><td><tt class="tag">RT_OMNISTAR_VB_EXPIRED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Virtual Base Station status: Expired.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusVbsOutOfRegion</span></td><td><tt class="tag">RT_OMNISTAR_VB_IS_OUT_OF_REGION</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Virtual Base Station status: Out of region.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusVbsNoRemoteSites</span></td><td><tt class="tag">RT_OMNISTAR_NO_REMOTE_SITES</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>Virtual Base Station status: No remote sites.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.OmniStar_HighPerformance :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusHpExpired</span></td><td><tt class="tag">RT_OMNISTAR_HP_EXPIRED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>High Performance status: Expired.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusHpOutOfRegion</span></td><td><tt class="tag">RT_OMNISTAR_HP_OUT_OF_REGION</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>High Performance status: Out of region.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusHpNoRemoteSites</span></td><td><tt class="tag"/></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>High Performance status: No remote sites.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusHpNotConverged</span></td><td><tt class="tag">RT_OMNISTAR_HP_NOT_CONVERGED</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>High Performance status: Not converged.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OmniStatusHpKeyInvalid</span></td><td><tt class="tag">RT_OMNISTAR_HP_KEY_INVALID</tt></td><td><tt class="type">bool</tt></td><td/><td><tt/></td><td><i>High Performance status: Key is invalid.</i></td><td/></tr>
+</table>
+<h2 xmlns="" style="color: blue">2. General user options</h2>
+<h3 xmlns="" style="color: green">2.1. General options</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.General_Option :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionLevel</span></td><td><tt class="tag">RT_OPTION_LEVEL</tt></td><td><tt class="type">int</tt></td><td>ComOptionVehicle</td><td><tt>E S </tt></td><td><i>Vehicle approximately level during initialisation?</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionVibration</span></td><td><tt class="tag">RT_OPTION_VIBRATION</tt></td><td><tt class="type">int</tt></td><td>ComOptionVibration</td><td><tt>E S </tt></td><td><i>Vibration level.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionGpsAcc</span></td><td><tt class="tag">RT_OPTION_GPS_ACCURACY</tt></td><td><tt class="type">int</tt></td><td>ComOptionGpsAccuracy</td><td><tt>E S </tt></td><td><i>GPS environment.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionUdp</span></td><td><tt class="tag">RT_OPTION_UDP</tt></td><td><tt class="type">int</tt></td><td>ComOptionOutput</td><td><tt>E S </tt></td><td><i>Packet format transmitted over Ethernet.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionSer1</span></td><td><tt class="tag">RT_OPTION_SER_1</tt></td><td><tt class="type">int</tt></td><td>ComOptionOutput</td><td><tt>E S </tt></td><td><i>Packet format transmitted over serial port 1.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionSer2</span></td><td><tt class="tag">RT_OPTION_SER_2</tt></td><td><tt class="type">int</tt></td><td>ComOptionOutput</td><td><tt>E S </tt></td><td><i>Packet format transmitted over serial port 2.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionSer3</span></td><td><tt class="tag">RT_OPTION_SER_3</tt></td><td><tt class="type">int</tt></td><td>ComOptionOutput</td><td><tt>E S </tt></td><td><i>Packet format transmitted over serial port 3.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionHeading</span></td><td><tt class="tag">RT_OPTION_HEADING</tt></td><td><tt class="type">int</tt></td><td>ComOptionHeading</td><td><tt>E S </tt></td><td><i>Dual antenna heading initialisation mode.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.General_Option_Speed :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionInitSpeed</span></td><td><tt class="tag">RT_OPTION_INIT_SPEED</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Initialisation speed.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">OptionTopSpeed</span></td><td><tt class="tag">RT_OPTION_TOP_SPEED</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Maximum vehicle speed.</i></td><td>m s⁻¹</td></tr>
+</table>
+<h3 xmlns="" style="color: green">2.2. Output baud rate settings</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionSer1Baud</span></td><td><tt class="tag">RT_OPTION_SERIAL_1_BAUD</tt></td><td><tt class="type">int</tt></td><td>ComOptionSerBaud</td><td><tt>E S </tt></td><td><i>Serial port 1 baud.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionSer2Baud</span></td><td><tt class="tag">RT_OPTION_SERIAL_2_BAUD</tt></td><td><tt class="type">int</tt></td><td>ComOptionSerBaud</td><td><tt>E S </tt></td><td><i>Serial port 2 baud.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OptionSer3Baud</span></td><td><tt class="tag">RT_OPTION_SERIAL_3_BAUD</tt></td><td><tt class="type">int</tt></td><td>ComOptionSerBaud</td><td><tt>E S </tt></td><td><i>Serial port 3 baud.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Can_Option :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionCanBaud</span></td><td><tt class="tag">RT_OPTION_CAN_BAUD</tt></td><td><tt class="type">int</tt></td><td>ComOptionCanBaud</td><td><tt>E S </tt></td><td><i>Controller area network (CAN) bus baud rate.</i></td><td/></tr>
+</table>
+<h2 xmlns="" style="color: blue">3. General measurements</h2>
+<h3 xmlns="" style="color: green">3.1. Timing</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr><td class="name"><span class="name_unk">Time</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Seconds from GPS time zero (0h 1980-01-06).</i></td><td>s</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Time_Extra :
+						 .Time</td></tr>
+<tr><td class="name"><span class="name_der">TimeWeekCount</span></td><td><tt class="tag"/></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>GPS time format, week counter.</i></td><td>week</td></tr>
+<tr><td class="name"><span class="name_der">TimeWeekSecond</span></td><td><tt class="tag">RT_GPS_TIME_OF_WEEK</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>GPS time format, seconds into week.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">TimeUtcOffset</span></td><td><tt class="tag">RT_UTC_OFFSET</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i>Offset between Coordinated Universal Time (UTC) and GPS time.</i></td><td>s</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.2. Position</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Pos :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Lat</span></td><td><tt class="tag">RT_LAT</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Latitude.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Lon</span></td><td><tt class="tag">RT_LONGITUDE</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Longitude.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Alt</span></td><td><tt class="tag">RT_ALT</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Altitude.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Pos_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">NorthAcc</span></td><td><tt class="tag">RT_BNS_POS_NORTH_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>North accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">EastAcc</span></td><td><tt class="tag">RT_BNS_POS_EAST_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>East accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">AltAcc</span></td><td><tt class="tag">RT_BNS_POS_ALTITUDE_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Altitude accuracy.</i></td><td>m</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.3. Distance</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Dist :
+						 .Time .Speed</td></tr>
+<tr><td class="name"><span class="name_der">Dist2d</span></td><td><tt class="tag">RT_DIST</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Distance travelled in horizontal directions.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_der">Dist3d</span></td><td><tt class="tag">RT_DIST_3D</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Distance travelled in all directions.</i></td><td>m</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.4. Velocity</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Vel :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Vn</span></td><td><tt class="tag">RT_VELOCITY_NORTH</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>North velocity.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">Ve</span></td><td><tt class="tag">RT_VELOCITY_EAST</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>East velocity.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">Vd</span></td><td><tt class="tag">RT_VELOCITY_DOWN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Downward velocity.</i></td><td>m s⁻¹</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Vel_Fld :
+						 .AngPos .Vel</td></tr>
+<tr><td class="name"><span class="name_der">Vf</span></td><td><tt class="tag">RT_VELOCITY_FORWARD</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Forward velocity.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_der">Vl</span></td><td><tt class="tag">RT_VELOCITY_LAT</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Lateral velocity.</i></td><td>m s⁻¹</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Vel_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">VnAcc</span></td><td><tt class="tag">RT_BNS_VELOCITY_NORTH_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>North velocity accuracy.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">VeAcc</span></td><td><tt class="tag">RT_BNS_VELOCITY_EAST_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>East velocity accuracy.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">VdAcc</span></td><td><tt class="tag">RT_BNS_VELOCITY_ALTITUDE_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Down velocity accuracy.</i></td><td>m s⁻¹</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.5. Speed</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Speed :
+						 .Vel .Vel_Accuracy</td></tr>
+<tr><td class="name"><span class="name_der">Speed2d</span></td><td><tt class="tag">RT_SPEED</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Speed in horizonal directions.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_der">Speed3d</span></td><td><tt class="tag">RT_SPEED_3D</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Speed in all directions.</i></td><td>m s⁻¹</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.6. Acceleration</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Acc :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Ax</span></td><td><tt class="tag">RT_ACCELERATION_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration along the X axis.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">Ay</span></td><td><tt class="tag">RT_ACCELERATION_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration along the Y axis.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">Az</span></td><td><tt class="tag">RT_ACCELERATION_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration along the Z axis.</i></td><td>m s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Acc_Fld :
+						 .AngPos .Acc</td></tr>
+<tr><td class="name"><span class="name_der">Af</span></td><td><tt class="tag">RT_ACCELERATION_FORWARD</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration forward.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Al</span></td><td><tt class="tag">RT_ACCELERATION_LAT</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration laterally.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Ad</span></td><td><tt class="tag">RT_ACCELERATION_DOWN</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Acceleration downward.</i></td><td>m s⁻²</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.7. Filtered acceleration</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.FiltAcc :
+						 .Acc .Time</td></tr>
+<tr><td class="name"><span class="name_der">FiltAx</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration along the X axis.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltAy</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration along the Y axis.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltAz</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration along the Z axis.</i></td><td>m s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.FiltAcc_Fld :
+						 .AngPos .FiltAcc</td></tr>
+<tr><td class="name"><span class="name_der">FiltAf</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration forward.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltAl</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration laterally.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltAd</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered acceleration downward.</i></td><td>m s⁻²</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.8. Orientation</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngPos :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Heading</span></td><td><tt class="tag">RT_HEADING</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Heading.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Pitch</span></td><td><tt class="tag">RT_PITCH</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Pitch.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Roll</span></td><td><tt class="tag">RT_ROLL</tt></td><td><tt class="type">double</tt></td><td/><td><tt>X </tt></td><td><i>Roll.</i></td><td>°</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngPos_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">HeadingAcc</span></td><td><tt class="tag">RT_BNS_HEADING_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Heading accuracy.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">PitchAcc</span></td><td><tt class="tag">RT_BNS_PITCH_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Pitch accuracy.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">RollAcc</span></td><td><tt class="tag">RT_BNS_ROLL_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Roll accuracy.</i></td><td>°</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.9. Special</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr><td class="name"><span class="name_der">Track</span></td><td><tt class="tag">RT_TRACK</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Track angle.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_der">Slip</span></td><td><tt class="tag">RT_SLIP</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Slip angle.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_der">Curvature</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Curvature.</i></td><td>m⁻¹</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.10. Angular rate</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngVel :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Wx</span></td><td><tt class="tag">RT_ANGULAR_RATE_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the X axis.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">Wy</span></td><td><tt class="tag">RT_ANGULAR_RATE_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the Y axis.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">Wz</span></td><td><tt class="tag">RT_ANGULAR_RATE_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the Z axis.</i></td><td>° s⁻¹</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngVel_Fld :
+						 .AngPos .AngVel</td></tr>
+<tr><td class="name"><span class="name_der">Wf</span></td><td><tt class="tag">RT_ANGULAR_RATE_FORWARD</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the forward axis.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_der">Wl</span></td><td><tt class="tag">RT_ANGULAR_RATE_LAT</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the lateral axis.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_der">Wd</span></td><td><tt class="tag">RT_ANGULAR_RATE_DOWN</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular rate about the down axis.</i></td><td>° s⁻¹</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.11. Angular acceleration</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngAcc :
+						 .AngVel .Time</td></tr>
+<tr><td class="name"><span class="name_der">Yx</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the X axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Yy</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the Y axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Yz</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the Z axis.</i></td><td>° s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngAcc_Fld :
+						 .AngPos .AngAcc</td></tr>
+<tr><td class="name"><span class="name_der">Yf</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the forward axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Yl</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the lateral axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">Yd</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration about the down axis.</i></td><td>° s⁻²</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.12. Filtered angular acceleration</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.FiltAngAcc :
+						 .AngAcc .Time</td></tr>
+<tr><td class="name"><span class="name_der">FiltYx</span></td><td><tt class="tag">RT_ANGULAR_X_DOT_FILTER</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the X axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltYy</span></td><td><tt class="tag">RT_ANGULAR_Y_DOT_FILTER</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the Y axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltYz</span></td><td><tt class="tag">RT_ANGULAR_Z_DOT_FILTER</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the Z axis.</i></td><td>° s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.FiltAngAcc_Fld :
+						 .AngPos .FiltAngAcc</td></tr>
+<tr><td class="name"><span class="name_der">FiltYf</span></td><td><tt class="tag">RT_ANGULAR_ACCEL_FORWARD</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the forward axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltYl</span></td><td><tt class="tag">RT_ANGULAR_ACCEL_LATERAL</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the lateral axis.</i></td><td>° s⁻²</td></tr>
+<tr><td class="name"><span class="name_der">FiltYd</span></td><td><tt class="tag">RT_ANGULAR_ACCEL_DOWN</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered angular acceleration about the down axis.</i></td><td>° s⁻²</td></tr>
+</table>
+<h3 xmlns="" style="color: green">3.13. Filter characteristics</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr style="background-color:#FFFFAA;"><td class="name"><span class="name_raw">LinAccFiltFreq</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Linear acceleration filter frequency.</i></td><td/></tr>
+<tr style="background-color:#FFFFAA;"><td class="name"><span class="name_raw">LinAccFiltZeta</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Linear acceleration filter damping ratio.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr style="background-color:#FFFFAA;"><td class="name"><span class="name_raw">AngAccFiltFreq</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration filter frequency.</i></td><td/></tr>
+<tr style="background-color:#FFFFAA;"><td class="name"><span class="name_raw">AngAccFiltZeta</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Angular acceleration filter damping ratio.</i></td><td/></tr>
+</table>
+<h2 xmlns="" style="color: blue">4. Model particulars</h2>
+<h3 xmlns="" style="color: green">4.1. Innovations (discrepancy between GPS and IMU)</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Pos_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnPosX</span></td><td><tt class="tag">RT_GPS_POS_X_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in latitude.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnPosY</span></td><td><tt class="tag">RT_GPS_POS_Y_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in longitude.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnPosZ</span></td><td><tt class="tag">RT_GPS_POS_Z_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in altitude.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Vel_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnVelX</span></td><td><tt class="tag">RT_GPS_VEL_X_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in north velocity.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnVelY</span></td><td><tt class="tag">RT_GPS_VEL_X_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in east velocity.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnVelZ</span></td><td><tt class="tag">RT_GPS_VEL_X_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in down velocity.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AngPos_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnHeading</span></td><td><tt class="tag">RT_GPS_HEADING_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in heading.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnPitch</span></td><td><tt class="tag">RT_GPS_PITCH_INN</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Innovation in pitch.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">4.2. Gyroscope bias and scale factor</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GyroBias :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WxBias</span></td><td><tt class="tag">RT_GYRO_WX_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X gyroscope bias.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">WyBias</span></td><td><tt class="tag">RT_GYRO_WY_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y gyroscope bias.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">WzBias</span></td><td><tt class="tag">RT_GYRO_WZ_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z gyroscope bias.</i></td><td>° s⁻¹</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GyroBias_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WxBiasAcc</span></td><td><tt class="tag">RT_WX_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X gyroscope bias accuracy.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">WyBiasAcc</span></td><td><tt class="tag">RT_WY_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y gyroscope bias accuracy.</i></td><td>° s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">WzBiasAcc</span></td><td><tt class="tag">RT_WZ_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z gyroscope bias accuracy.</i></td><td>° s⁻¹</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GyroScale :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WxSf</span></td><td><tt class="tag">RT_WX_SCALE_FACTOR</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X gyroscope scale factor deviation.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">WySf</span></td><td><tt class="tag">RT_WY_SCALE_FACTOR</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y gyroscope scale factor deviation.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">WzSf</span></td><td><tt class="tag">RT_WZ_SCALE_FACTOR</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z gyroscope scale factor deviation.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.GyroScale_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WxSfAcc</span></td><td><tt class="tag">RT_WX_SF_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X gyroscope scale factor deviation accuracy.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">WySfAcc</span></td><td><tt class="tag">RT_WY_SF_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y gyroscope scale factor deviation accuracy.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">WzSfAcc</span></td><td><tt class="tag">RT_WZ_SF_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z gyroscope scale factor deviation accuracy.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">4.3. Accelerometer bias and scale factor</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AccelBias :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AxBias</span></td><td><tt class="tag">RT_ACCEL_AX_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X accelerometer bias.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">AyBias</span></td><td><tt class="tag">RT_ACCEL_AY_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y accelerometer bias.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">AzBias</span></td><td><tt class="tag">RT_ACCEL_AZ_BIAS</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z accelerometer bias.</i></td><td>m s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AccelBias_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AxBiasAcc</span></td><td><tt class="tag">RT_AX_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X accelerometer bias accuracy.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">AyBiasAcc</span></td><td><tt class="tag">RT_AY_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y accelerometer bias accuracy.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">AzBiasAcc</span></td><td><tt class="tag">RT_AY_BIAS_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z accelerometer bias accuracy.</i></td><td>m s⁻²</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AccelScale :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AxSf</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X accelerometer scale factor deviation.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">AySf</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y accelerometer scale factor deviation.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">AzSf</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z accelerometer scale factor deviation.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.AccelScale_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AxSfAcc</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>X accelerometer scale factor deviation accuracy.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">AySfAcc</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Y accelerometer scale factor deviation accuracy.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">AzSfAcc</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Z accelerometer scale factor deviation accuracy.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">4.4. GPS antenna position</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Antenna_Pos :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">GAPx</span></td><td><tt class="tag">RT_GAP_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position X offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">GAPy</span></td><td><tt class="tag">RT_GAP_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position Y offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">GAPz</span></td><td><tt class="tag">RT_GAP_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position Z offset.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Antenna_Pos_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">GAPxAcc</span></td><td><tt class="tag">RT_GAP_X_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position X offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">GAPyAcc</span></td><td><tt class="tag">RT_GAP_Y_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position Y offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">GAPzAcc</span></td><td><tt class="tag">RT_GAP_Z_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Primary GPS antenna position Z offset accuracy.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Antenna_AngPos :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AtH</span></td><td><tt class="tag">RT_GPS_ATTITUDE_HEADING</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Secondary GPS antenna relative heading.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">AtP</span></td><td><tt class="tag">RT_GPS_ATTITUDE_PITCH</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Secondary GPS antenna relative pitch.</i></td><td>°</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Antenna_AngPos_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">AtHAcc</span></td><td><tt class="tag">RT_GPS_ATTITUDE_HEADING_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Secondary GPS antenna relative heading accuracy.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">AtPAcc</span></td><td><tt class="tag">RT_GPS_ATTITUDE_PITCH_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Secondary GPS antenna relative pitch accuracy.</i></td><td>°</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">BaseLineLength</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Distance between GPS antennas.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">BaseLineLengthAcc</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Distance between GPS antennas accuracy.</i></td><td>m</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">5. Statistics</h2>
+<h3 xmlns="" style="color: green">5.1. IMU hardware status event counters</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Stats_Imu_Events :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">ImuMissedPkts</span></td><td><tt class="tag">RT_IMU_MISSED_PKT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of IMU hardware missed packets.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuResetCount</span></td><td><tt class="tag">RT_IMU_RESET_COUNT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of IMU hardware resets.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuErrorCount</span></td><td><tt class="tag">RT_IMU_ERROR_COUNT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Number of IMU hardware errors.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">5.2. GPS successive rejected aiding updates</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Stats_Gps_Reject :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">GPSPosReject</span></td><td><tt class="tag">RT_GPS_POS_REJECT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>Number of successive GPS position updates rejected.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GPSVelReject</span></td><td><tt class="tag">RT_GPS_VEL_REJECT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>Number of successive GPS velocity updates rejected.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">GPSAttReject</span></td><td><tt class="tag">RT_GPS_ATT_REJECT</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>Number of successive GPS attitude updates rejected.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">5.3. Received data statistics</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Stats_Imu_Received :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">ImuChars</span></td><td><tt class="tag">RT_IMU_CHARS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt/></td><td><i>IMU number of bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuCharsSkipped</span></td><td><tt class="tag">RT_IMU_PKTS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>IMU number of invalid bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuPkts</span></td><td><tt class="tag">RT_IMU_CHARS_SKIPPED</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>IMU number of valid packets.</i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Stats_Cmd_Received :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">CmdChars</span></td><td><tt class="tag">RT_CMD_CHAR</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Command number of bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">CmdCharsSkipped</span></td><td><tt class="tag">RT_CMD_CHAR_SKIPPED</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Command number of invalid bytes.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">CmdPkts</span></td><td><tt class="tag">RT_CMD_PKTS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Command number of valid packets.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">CmdErrors</span></td><td><tt class="tag">RT_CMD_ERRORS</tt></td><td><tt class="type">uint32_t</tt></td><td/><td><tt>I </tt></td><td><i>Command number of errors.</i></td><td/></tr>
+</table>
+<h2 xmlns="" style="color: blue">6. Transformation Euler angles</h2>
+<h3 xmlns="" style="color: green">6.1. Orientation of vehicle-frame relative to IMU-frame</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Imu2Veh :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">Imu2VehHeading</span></td><td><tt class="tag">RT_VEHICLE_HEADING</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Heading.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Imu2VehPitch</span></td><td><tt class="tag">RT_VEHICLE_PITCH</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Pitch.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">Imu2VehRoll</span></td><td><tt class="tag">RT_VEHICLE_ROLL</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Roll.</i></td><td>°</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">7. Miscellaneous items</h2>
+<h3 xmlns="" style="color: green">7.1. Triggers</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">* .Triggers :
+						</td></tr>
+<tr><td class="name"><span class="name_der">TrigTime</span></td><td><tt class="tag">RT_TRIG_TIME</tt></td><td><tt class="type">double</tt></td><td/><td><tt>N </tt></td><td><i>Time of last trigger falling edge.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_der">Trig2Time</span></td><td><tt class="tag">RT_TRIG_2_TIME</tt></td><td><tt class="type">double</tt></td><td/><td><tt>N </tt></td><td><i>Time of last trigger rising edge.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_der">DigitalOutTime</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt>N </tt></td><td><i>Time of last digital output.</i></td><td>s</td></tr>
+</table>
+<h3 xmlns="" style="color: green">7.2. Remote lever arm option</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.RemoteLeverArm :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">RemoteLeverArmX</span></td><td><tt class="tag">RT_REMOTE_LEVER_ARM_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Remote lever arm X position.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">RemoteLeverArmY</span></td><td><tt class="tag">RT_REMOTE_LEVER_ARM_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Remote lever arm Y position.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">RemoteLeverArmZ</span></td><td><tt class="tag">RT_REMOTE_LEVER_ARM_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Remote lever arm Z position.</i></td><td>m</td></tr>
+</table>
+<h3 xmlns="" style="color: green">7.3. Local reference frame (definition)</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.RefFrame_Definition :
+						 .Pos</td></tr>
+<tr><td class="name"><span class="name_raw">RefLat</span></td><td><tt class="tag">RT_LAT_REF</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Reference frame latitude.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">RefLon</span></td><td><tt class="tag">RT_LONGITUDE_REF</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Reference frame longitude.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">RefAlt</span></td><td><tt class="tag">RT_ALT_REF</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Reference frame altitude.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">RefHeading</span></td><td><tt class="tag">RT_HEADING_REF</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Reference frame heading.</i></td><td>°</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">8. Zero velocity and advanced slip</h2>
+<h3 xmlns="" style="color: green">8.1. Innovations</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.ZeroVel_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnZeroVelX</span></td><td><tt class="tag">RT_INN_ZERO_VEL_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Discrepancy from zero of north velocity.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnZeroVelY</span></td><td><tt class="tag">RT_INN_ZERO_VEL_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Discrepancy from zero of east velocity.</i></td><td>-</td></tr>
+<tr><td class="name"><span class="name_raw">InnZeroVelZ</span></td><td><tt class="tag">RT_INN_ZERO_VEL_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Discrepancy from zero of downward velocity.</i></td><td>-</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.NoSlip_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnNoSlipH</span></td><td><tt class="tag">RT_INN_NO_SLIP_H</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Discrepancy of slip angle at rear wheels.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">8.2. Lever arm options</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.ZeroVel_LeverArm :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmX</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position X offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmY</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position Y offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmZ</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position Z offset.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.ZeroVel_LeverArm_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmXAcc</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_X_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position X offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmYAcc</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_Y_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position Y offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">ZeroVelLeverArmZAcc</span></td><td><tt class="tag">RT_ZERO_VEL_LEVER_ARM_Z_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Zero velocity position Z offset accuracy.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.NoSlip_LeverArm :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmX</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position X offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmY</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position Y offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmZ</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position Z offset.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.NoSlip_LeverArm_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmXAcc</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_X_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position X offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmYAcc</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_Y_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position Y offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">NoSlipLeverArmZAcc</span></td><td><tt class="tag">RT_NO_SLIP_LEVER_ARM_Z_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Rear wheel position Z offset accuracy.</i></td><td>m</td></tr>
+</table>
+<h3 xmlns="" style="color: green">8.3. Heading alignment</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">. :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">HeadingMisAlign</span></td><td><tt class="tag">RT_SET_HEADING_MIS_ALIGN</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Estimated heading offset between unit and vehicle.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">HeadingMisAlignAcc</span></td><td><tt class="tag">RT_SET_HEADING_MIS_ALIGN_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Estimated accuracy of heading offset between unit and vehicle.</i></td><td>°</td></tr>
+</table>
+<h3 xmlns="" style="color: green">8.4. User Options</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.ZeroVel_Option :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionSZVDelay</span></td><td><tt class="tag">RT_OPTION_SZV_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Garage mode setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionSZVPeriod</span></td><td><tt class="tag">RT_OPTION_SZV_PERIOD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Garage mode setting.</i></td><td>s</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.NoSplip_Option :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSDelay</span></td><td><tt class="tag">RT_OPTION_NS_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSPeriod</span></td><td><tt class="tag">RT_OPTION_NS_PERIOD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSAngleStd</span></td><td><tt class="tag">RT_OPTION_SLIP_STD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>°</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSHAccel</span></td><td><tt class="tag">RT_OPTION_NSH_ACC</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSVAccel</span></td><td><tt class="tag">RT_OPTION_NSV_ACC</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>m s⁻²</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSSpeed</span></td><td><tt class="tag">RT_OPTION_NS_SPEED</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>m s⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">OptionNSRadius</span></td><td><tt class="tag">RT_OPTION_NS_RADIUS</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Advanced slip setting.</i></td><td>m</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">9. Wheel speed input</h2>
+<h3 xmlns="" style="color: green">9.1. Innovations</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnWSpeed</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Wheel speed innovation.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">9.2. Wheel speed lever arm option</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_LeverArm :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmX</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_X</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position X offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmY</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_Y</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position Y offset.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmZ</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_Z</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position Z offset.</i></td><td>m</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_LeverArm_Accuracy :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmXAcc</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_X_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position X offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmYAcc</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_Y_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position Y offset accuracy.</i></td><td>m</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedLeverArmZAcc</span></td><td><tt class="tag">RT_WHEEL_SPEED_LEVER_ARM_Z_ACCURACY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed position Z offset accuracy.</i></td><td>m</td></tr>
+</table>
+<h3 xmlns="" style="color: green">9.3. Wheel speed input model</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_Model :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedScale</span></td><td><tt class="tag">RT_WHEEL_SPEED_SCALE</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Wheel speed scale factor.</i></td><td>pulse m⁻¹</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedScaleStd</span></td><td><tt class="tag">RT_WHEEL_SPEED_SCALE_STD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Wheel speed scale factor accuracy.</i></td><td>%</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_Options :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionWSpeedDelay</span></td><td><tt class="tag">RT_WHEEL_SPEED_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Wheel speed setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionWSpeedZVDelay</span></td><td><tt class="tag">RT_WHEEL_SPEED_ZV_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Wheel speed setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionWSpeedNoiseStd</span></td><td><tt class="tag">RT_WHEEL_SPEED_NOISE_STD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Wheel speed setting.</i></td><td/></tr>
+</table>
+<h3 xmlns="" style="color: green">9.4. Wheel speed tacho measurements</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.WSpeed_Measure :
+						 .Time</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedTime</span></td><td><tt class="tag">RT_WHEEL_SPEED_TIME</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Time of last wheel speed measurement.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedCount</span></td><td><tt class="tag">RT_WHEEL_SPEED_COUNT</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Count at last wheel speed measurement.</i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">WSpeedTimeUnchanged</span></td><td><tt class="tag">RT_WHEEL_SPEED_TIME_UNCHANGED</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Time since last count.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">WSpeedFreq</span></td><td><tt class="tag">RT_WHEEL_SPEED_FREQUENCY</tt></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Wheel speed frequency.</i></td><td>Hz</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">10. Heading lock</h2>
+<h3 xmlns="" style="color: green">10.1. Innovations</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.HeadLock_Innovation :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">InnHeadingH</span></td><td><tt class="tag">RT_INN_HEADING_H</tt></td><td><tt class="type">double</tt></td><td/><td><tt>A </tt></td><td><i>Heading lock innovation.</i></td><td>-</td></tr>
+</table>
+<h3 xmlns="" style="color: green">10.2. User options</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.HeadLock_Option :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionHLDelay</span></td><td><tt class="tag">RT_OPTION_HL_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Heading lock setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionHLPeriod</span></td><td><tt class="tag">RT_OPTION_HL_PERIOD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Heading lock setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionHLAngleStd</span></td><td><tt class="tag">RT_OPTION_HEAD_LOCK_STD</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Heading lock setting.</i></td><td>°</td></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.HeadLock_Option_Stat :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">OptionStatDelay</span></td><td><tt class="tag">RT_OPTION_STAT_DELAY</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Heading lock setting.</i></td><td>s</td></tr>
+<tr><td class="name"><span class="name_raw">OptionStatSpeed</span></td><td><tt class="tag">RT_OPTION_STAT_SPEED</tt></td><td><tt class="type">double</tt></td><td/><td><tt>C </tt></td><td><i>Heading lock setting.</i></td><td>m s⁻¹</td></tr>
+</table>
+<h2 xmlns="" style="color: blue">11. For use in testing</h2>
+<h3 xmlns="" style="color: green">11.1. Reserved for testing</h3>
+<table xmlns="" style="border: 1px solid black; margin: 0px 5px 10px 5px;"><tr style="text-align: left; font-variant: small-caps;"><th style="width: 200px;">Variable Name</th><th style="width: 200px;">Tag Name</th><th style="width:  70px;">Type</th><th style="width: 170px;">Enumeration</th><th style="width:  70px;">Status</th><th style="width: 480px;">Description</th><th style="width:  60px;">Unit</th></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Internal :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">TimeMismatch</span></td><td><tt class="tag">RT_TIME_MISMATCH</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuTimeDiff</span></td><td><tt class="tag">RT_IMU_TIME_DIFF</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuTimeMargin</span></td><td><tt class="tag">RT_IMU_TIME_MARGIN</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">ImuLoopTime</span></td><td><tt class="tag">RT_IMU_LOOP_TIME</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td class="name"><span class="name_raw">OpLoopTime</span></td><td><tt class="tag">RT_IMU_OP_LOOP_TIME</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td colspan="5" style="height:10px;"/></tr>
+<tr><td colspan="5" style="font-size:7pt; font-family: Tahoma; font-weight: bold; color:navy;">.Internal_Bns :
+						</td></tr>
+<tr><td class="name"><span class="name_raw">BnsLag</span></td><td><tt class="tag">RT_BNS_LAG_FILTER</tt></td><td><tt class="type">int</tt></td><td/><td><tt/></td><td><i><span style="color: red; font-weight: bold;">** <todo>change to uint32_t</todo> **</span></i></td><td/></tr>
+<tr><td class="name"><span class="name_der">BnsLagFilt</span></td><td><tt class="tag"/></td><td><tt class="type">double</tt></td><td/><td><tt/></td><td><i>Filtered version of BnsLag</i></td><td/></tr>
+</table>
+<p>
+		* This will always be decoded and both upstream and downstream dependencies may or may not be given
+		  is this document and may or may not be explicitly used in the source.
+		</p></body></html>

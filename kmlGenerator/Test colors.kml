@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Test colors</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>Paths folder</name>
+			<Placemark>
+				<name>Shaded poly</name>
+				<description><![CDATA[This is a shady poly]]></description>
+				<styleUrl>#poly-FF5252-4-163</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-6.0,51.3601,0.0 -6.000063,51.3601,0.0 -6.000125,51.360096,0.0 -6.000185,51.360092,0.0 -6.000241,51.360088,0.0 -6.000294,51.360081,0.0 -6.000342,51.360073,0.0 -6.000385,51.360065,0.0 -6.000422,51.360054,0.0 -6.000453,51.360043,0.0 -6.000476,51.360031,0.0 -6.000491,51.36002,0.0 -6.000499,51.360008,0.0 -6.000499,51.359993,0.0 -6.000491,51.359982,0.0 -6.000476,51.35997,0.0 -6.000453,51.359959,0.0 -6.000422,51.359947,0.0 -6.000385,51.359936,0.0 -6.000342,51.359928,0.0 -6.000294,51.35992,0.0 -6.000241,51.359913,0.0 -6.000185,51.359909,0.0 -6.000125,51.359905,0.0 -6.000063,51.359901,0.0 -6.0,51.359901,0.0 -5.999938,51.359901,0.0 -5.999876,51.359905,0.0 -5.999816,51.359909,0.0 -5.99976,51.359913,0.0 -5.999706,51.35992,0.0 -5.999658,51.359928,0.0 -5.999615,51.359936,0.0 -5.999578,51.359947,0.0 -5.999548,51.359959,0.0 -5.999525,51.35997,0.0 -5.999509,51.359982,0.0 -5.999501,51.359993,0.0 -5.999501,51.360008,0.0 -5.999509,51.36002,0.0 -5.999525,51.360031,0.0 -5.999548,51.360043,0.0 -5.999578,51.360054,0.0 -5.999615,51.360065,0.0 -5.999658,51.360073,0.0 -5.999706,51.360081,0.0 -5.99976,51.360088,0.0 -5.999816,51.360092,0.0 -5.999876,51.360096,0.0 -5.999938,51.3601,0.0 -6.0,51.3601,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Green Line</name>
+				<description><![CDATA[This is a line]]></description>
+				<styleUrl>#line-0097A7-6</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>-6.0008794,51.3602222,0.0 -6.0003752,51.3604667,0.0 -5.9996349,51.3605839,0.0 -5.9992701,51.3605069,0.0</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+		<Style id='line-0097A7-6-normal'>
+			<LineStyle>
+				<color>ffA79700</color>
+				<width>6</width>
+			</LineStyle>
+		</Style>
+		<Style id='line-0097A7-6-highlight'>
+			<LineStyle>
+				<color>ffA79700</color>
+				<width>9.0</width>
+			</LineStyle>
+		</Style>
+		<StyleMap id='line-0097A7-6'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#line-0097A7-6-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#line-0097A7-6-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF5252-4-163-normal'>
+			<LineStyle>
+				<color>ff5252FF</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>A35252FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FF5252-4-163-highlight'>
+			<LineStyle>
+				<color>ff5252FF</color>
+				<width>6.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>A35252FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FF5252-4-163'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF5252-4-163-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF5252-4-163-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
